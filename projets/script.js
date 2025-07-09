@@ -1,7 +1,3 @@
-// ==========================
-// Fichier script.js - Projets
-// ==========================
-
 // Thème clair / sombre
 const themeToggle = document.querySelector('.toggle-icon');
 if (themeToggle) {
