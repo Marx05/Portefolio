@@ -1,0 +1,275 @@
+/* ✅ Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ✅ Menu latéral */
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: red;
+}
+
+/* ✅ Burger menu (mobile) */
+.burger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.nav-container {
+  margin-top: 30px;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu li {
+  margin: 20px 0;
+}
+
+.nav-menu a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-menu .active a,
+.nav-menu a:hover {
+  color: red;
+}
+
+/* ✅ Contenu principal */
+.about {
+  flex: 1;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: red;
+}
+
+/* ✅ Grille deux colonnes */
+.about-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.column h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Timeline verticale */
+.timeline {
+  border-left: 3px solid red;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item .dot {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.timeline-content .date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ✅ Paramètres de personnalisation */
+.color-picker {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+}
+
+.picker-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.picker-icon, .toggle-icon {
+  font-size: 18px;
+}
+
+.colors {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.color-picker.open .colors {
+  display: flex;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+/* ✅ Couleurs disponibles */
+.red { background-color: red; }
+.orange { background-color: orange; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+.purple { background-color: purple; }
+.pink { background-color: hotpink; }
+
+/* ✅ Thème clair */
+body.light {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+body.light .sidebar {
+  background-color: #fff;
+}
+
+body.light .nav-menu a {
+  color: #333;
+}
+
+body.light .nav-menu .active a {
+  color: #007bff;
+}
+
+body.light .timeline {
+  border-left-color: #007bff;
+}
+
+body.light .timeline-item .dot,
+body.light .timeline-content h3,
+body.light .section-title {
+  color: #007bff;
+}
+
+body.light .timeline-content {
+  background-color: #e9e9e9;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .burger {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-container {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-container.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-menu li {
+    text-align: center;
+  }
+
+  .about {
+    padding: 30px 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .color-picker {
+    position: static;
+    margin-top: 20px;
+    align-self: flex-end;
+  }
+
+  .colors {
+    justify-content: center;
+  }
+}

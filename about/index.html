@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Dannel Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ✅ Menu latéral (identique à la page Home) -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h1 class="logo-text">DANNEL</h1>
+    </div>
+
+    <!-- ✅ Menu burger pour mobile -->
+    <div class="burger" id="burger">☰</div>
+
+    <!-- ✅ Liens de navigation -->
+    <div class="nav-container" id="nav-container">
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../index.html">🏠 Home</a></li>
+          <li class="active"><a href="../about/index.html">👤 About</a></li>
+          <!-- <li><a href="../services/index.html">📋 Services</a></li> -->
+          <li><a href="../projets/index.html">💼 Projets</a></li>
+          <li><a href="../contact/index.html">💬 Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ✅ Contenu principal -->
+  <main class="about">
+
+    <!-- ✅ Titre principal -->
+    <h1 class="section-title">About Me</h1>
+
+    <!-- ✅ Grille avec deux colonnes : Éducation et Expérience -->
+    <div class="about-content">
+      <!-- ✅ Colonne Éducation -->
+      <div class="column">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="date">2013 - 2015</p>
+              <h3>Master in Computer Science</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+          </div>
+          <!-- Duplicate si besoin -->
+        </div>
+      </div>
+
+      <!-- ✅ Colonne Expérience -->
+      <div class="column">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="timeline-content">
+              <p class="date">2013 - 2015</p>
+              <h3>Master in Computer Science</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Paramètres de personnalisation (thème & couleurs) -->
+    <div class="color-picker">
+      <div class="picker-controls">
+        <div class="picker-icon">⚙️</div>
+        <div class="toggle-icon">🌙</div>
+      </div>
+      <div class="colors">
+        <span class="color red"></span>
+        <span class="color orange"></span>
+        <span class="color green"></span>
+        <span class="color blue"></span>
+        <span class="color purple"></span>
+        <span class="color pink"></span>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

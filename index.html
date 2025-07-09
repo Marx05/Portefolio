@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dannel Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ✅ Menu latéral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1 class="logo-text">DANNEL</h1>
+        </div>
+
+        <!-- ✅ Menu burger (mobile) -->
+        <div class="burger" id="burger">☰</div>
+
+        <!-- ✅ Menu navigation -->
+        <div class="nav-container" id="nav-container">
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">🏠 Home</a></li>
+                    <li ><a href="./about/index.html">👤 About</a></li>
+                    <!-- <li ><a href="../services/index.html">📋 Services</a></li> -->
+                    <li ><a href="./projets/index.html">💼 Projets</a></li>
+                    <li ><a href="./contact/index.html">💬 Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- ✅ Contenu principal -->
+    <main class="home">
+        <div class="intro-text">
+            <h2>Hello, my name is <span class="name">Dannel Marx Antoine</span></h2>
+            <h1>I'm a <span class="typed-text" id="typed-text">Graphic Designer</span></h1>
+            <p>I'm a web designer and developer with a passion for creating modern, responsive designs.</p>
+            <button class="about-btn"><a href="./about/index.html">More About Me</a></button>
+        </div>
+
+        <!-- ✅ Photo -->
+        <div class="profile-photo">
+            <div class="frame">
+                <img src="./img/marx.jpeg" alt="Dannel Marx Antoine">
+            </div>
+        </div>
+
+        <!-- ✅ Paramètres : thème et couleurs -->
+        <div class="color-picker">
+            <div class="picker-controls">
+                <div class="picker-icon">⚙️</div>
+                <div class="toggle-icon">🌙</div>
+            </div>
+            <div class="colors">
+                <span class="color red"></span>
+                <span class="color orange"></span>
+                <span class="color green"></span>
+                <span class="color blue"></span>
+                <span class="color purple"></span>
+                <span class="color pink"></span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

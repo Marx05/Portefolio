@@ -1,0 +1,317 @@
+/* ✅ Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ✅ Menu latéral */
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: red;
+}
+
+/* ✅ Burger menu */
+.burger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.nav-container {
+  margin-top: 30px;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu li {
+  margin: 20px 0;
+}
+
+.nav-menu a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-menu .active a,
+.nav-menu a:hover {
+  color: red;
+}
+
+/* ✅ Contenu principal */
+.contact {
+  flex: 1;
+  padding: 40px 60px;
+  position: relative;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.contact-subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.contact-service {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* ✅ Infos de contact */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 30px;
+}
+
+.info-box {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 32px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: red;
+}
+
+.info-box p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ✅ Formulaire */
+.email-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: red;
+}
+
+.responsive-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  width: 250px;
+  background-color: #1e1e1e;
+  color: #fff;
+  resize: none;
+}
+
+.contact-form textarea {
+  height: 100px;
+  width: 520px;
+  max-width: 100%;
+}
+
+.send-btn {
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* ✅ Personnalisation couleurs */
+.color-picker {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+}
+
+.picker-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.picker-icon, .toggle-icon {
+  font-size: 18px;
+}
+
+.colors {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.color-picker.open .colors {
+  display: flex;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.red { background-color: red; }
+.orange { background-color: orange; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+.purple { background-color: purple; }
+.pink { background-color: hotpink; }
+
+/* ✅ Thème clair */
+body.light {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+body.light .sidebar {
+  background-color: #fff;
+}
+
+body.light .nav-menu a {
+  color: #333;
+}
+
+body.light .nav-menu .active a {
+  color: #007bff;
+}
+
+body.light .info-box,
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background-color: #e9e9e9;
+  color: #222;
+}
+
+body.light .section-title,
+body.light .icon,
+body.light .info-box h3,
+body.light .email-label {
+  color: #007bff;
+}
+
+body.light .send-btn {
+  background-color: #007bff;
+}
+
+/* ✅ Responsive mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .burger {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-container {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-container.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu li {
+    text-align: center;
+  }
+
+  .contact {
+    padding: 30px 20px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .color-picker {
+    position: static;
+    margin-top: 20px;
+    align-self: flex-end;
+  }
+
+  .colors {
+    justify-content: center;
+  }
+}
